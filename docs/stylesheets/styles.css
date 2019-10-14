@@ -869,4 +869,22 @@ body {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.23); }
 
 body {
-  background-color: pink; }
+  background-color: grey; }
+
+.map {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh; }
+  .map .position-camera {
+    transform: translate(-80vw, -120vh); }
+    .map .position-camera .base {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      transform: rotate(210deg) skew(-30deg) scaleY(0.864); }
+      .map .position-camera .base .tile {
+        width: 10vw;
+        height: 10vw;
+        background-color: green;
+        box-shadow: 0px 0px 0px 1px black; }

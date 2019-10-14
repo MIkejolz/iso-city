@@ -7,5 +7,33 @@
 @import '../library/mixins';
 
 body {
-    background-color: pink;
+    background-color: grey;
+}
+
+.map {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    .position-camera {
+        transform: translate(-80vw,-120vh);
+        .base {
+            $w: 10vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            // perspective: 10000px;
+            transform: rotate(210deg) skew(-30deg) scaleY(0.864);
+            .tile {
+                width: $w;
+                height: $w;
+                background-color: green;
+                box-shadow: 0px 0px 0px 1px rgba(black, 1);
+                // transform-style: preserve-3d;
+                // transform: rotateX(-45deg) rotateY(30deg);
+                // transform: rotate(45deg) skew(0deg) translate(0px, 0px) scaleY(1);
+                // transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+            }
+        }
+    }
 }
