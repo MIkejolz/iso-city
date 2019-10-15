@@ -15,9 +15,9 @@ body {
     width: 100vw;
     height: 100vh;
     .position-camera {
-        transform: translate(-80vw,-120vh);
+        transform: translate(-3000px,-2200px);
         .base {
-            $w: 10vw;
+            $w: 100px;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
@@ -27,12 +27,21 @@ body {
             .tile {
                 width: $w;
                 height: $w;
+                position: relative;
                 background-color: green;
                 box-shadow: 0px 0px 0px 1px rgba(black, 1);
                 // transform-style: preserve-3d;
                 // transform: rotateX(-45deg) rotateY(30deg);
                 // transform: rotate(45deg) skew(0deg) translate(0px, 0px) scaleY(1);
                 // transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 40px;
+                    height: 40px;
+                    background-color: rgba(red, 0.2);
+                    transform: translate(30px, 30px);
+                }
             }
         }
     }

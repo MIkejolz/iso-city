@@ -876,7 +876,7 @@ body {
   width: 100vw;
   height: 100vh; }
   .map .position-camera {
-    transform: translate(-80vw, -120vh); }
+    transform: translate(-3000px, -2200px); }
     .map .position-camera .base {
       display: flex;
       flex-wrap: wrap;
@@ -884,7 +884,15 @@ body {
       align-items: flex-start;
       transform: rotate(210deg) skew(-30deg) scaleY(0.864); }
       .map .position-camera .base .tile {
-        width: 10vw;
-        height: 10vw;
+        width: 100px;
+        height: 100px;
+        position: relative;
         background-color: green;
         box-shadow: 0px 0px 0px 1px black; }
+        .map .position-camera .base .tile::after {
+          position: absolute;
+          content: "";
+          width: 40px;
+          height: 40px;
+          background-color: rgba(255, 0, 0, 0.2);
+          transform: translate(30px, 30px); }
