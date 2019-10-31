@@ -20,26 +20,29 @@
     <script type="text/javascript">
 
         // Create function to add
-        var toAdd = document.createDocumentFragment();
+        var fragment = document.createDocumentFragment();
+
+        // Function to create element
 
         // Create loop to add elements
         for(var i=0; i < 1200; i++){
 
             // Create element
-            var newDiv = document.createElement('div');
+            var tile = document.createElement('div');
+            tile.id = 'tile-'+i;
+            tile.className = 'tile';
 
-            // Add ID
-            // newDiv.id = 'tile-'+i;
+            var house = document.createElement('div');
+            house.id = 'house-'+i;
+            house.className = 'house';
 
-            // Add Class
-            newDiv.className = 'tile';
-
-            // Add elements to create function
-            toAdd.appendChild(newDiv);
+            // Add elements to each other
+            fragment.appendChild(tile);
+            tile.appendChild(house);
         }
 
         // Append elements to HTML
-        document.getElementById("base").appendChild(toAdd);
+        document.getElementById("base").appendChild(fragment);
 
     </script>
 

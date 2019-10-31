@@ -1,9 +1,6 @@
 @import '../library/reset';
 @import '../library/variables';
-@import '../library/margins';
-@import '../library/typography';
-@import '../library/layout';
-@import '../library/hierarchy';
+@import '../library/house';
 @import '../library/mixins';
 
 body {
@@ -34,13 +31,13 @@ body {
                 // transform: rotateX(-45deg) rotateY(30deg);
                 // transform: rotate(45deg) skew(0deg) translate(0px, 0px) scaleY(1);
                 // transform: rotate(210deg) skew(-30deg) translate(-200px, -60px) scaleY(0.864);
-                &::after {
+                .house {
                     position: absolute;
-                    content: "";
+                    top: 30px;
+                    left: 30px;
                     width: 40px;
                     height: 40px;
                     background-color: rgba(red, 0.2);
-                    transform: translate(30px, 30px);
                 }
             }
         }
