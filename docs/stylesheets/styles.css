@@ -83,7 +83,7 @@ body {
   width: 100vw;
   height: 100vh; }
   .map .position-camera {
-    transform: translate(-3000px, -2200px); }
+    transform: translate(-3600px, -2600px); }
     .map .position-camera .base {
       display: flex;
       flex-wrap: wrap;
@@ -102,4 +102,18 @@ body {
           left: 30px;
           width: 40px;
           height: 40px;
-          background-color: rgba(255, 0, 0, 0.2); }
+          background-color: rgba(255, 0, 0, 0.4); }
+        .map .position-camera .base .tile .building {
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          width: 40px;
+          height: 40px;
+          background-color: rgba(0, 0, 255, 0.4); }
+        .map .position-camera .base .tile .apartment {
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          width: 40px;
+          height: 40px;
+          background-color: rgba(255, 255, 0, 0.4); }

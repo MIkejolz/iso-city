@@ -12,7 +12,7 @@ body {
     width: 100vw;
     height: 100vh;
     .position-camera {
-        transform: translate(-3000px,-2200px);
+        transform: translate(-3600px,-2600px);
         .base {
             $w: 100px;
             display: flex;
@@ -37,7 +37,23 @@ body {
                     left: 30px;
                     width: 40px;
                     height: 40px;
-                    background-color: rgba(red, 0.2);
+                    background-color: rgba(red, 0.4);
+                }
+                .building {
+                    position: absolute;
+                    top: 30px;
+                    left: 30px;
+                    width: 40px;
+                    height: 40px;
+                    background-color: rgba(blue, 0.4);
+                }
+                .apartment {
+                    position: absolute;
+                    top: 30px;
+                    left: 30px;
+                    width: 40px;
+                    height: 40px;
+                    background-color: rgba(yellow, 0.4);
                 }
             }
         }
