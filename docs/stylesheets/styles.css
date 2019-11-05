@@ -78,25 +78,65 @@ table {
 body {
   background-color: grey; }
 
-.map {
+.map.top-view {
   overflow: hidden;
   width: 100vw;
   height: 100vh; }
-  .map .position-camera {
+  .map.top-view .position-camera .base {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start; }
+    .map.top-view .position-camera .base .tile {
+      width: 5vw;
+      height: 5vw;
+      position: relative;
+      background-color: green;
+      box-shadow: 0px 0px 0px 1px black;
+      transform: rotate(210deg) skew(-30deg) scaleY(0.864); }
+      .map.top-view .position-camera .base .tile .house {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(255, 0, 0, 0.4);
+        transform: rotate(90deg) skewX(-45deg) translate(10px, 0px) scaleY(0.864); }
+      .map.top-view .position-camera .base .tile .building {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        background-color: rgba(0, 0, 255, 0.4);
+        transform: rotate(-180deg) skewX(45deg) translate(-10px, 0px) scaleY(0.864); }
+      .map.top-view .position-camera .base .tile .apartment {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 10px;
+        height: 10px;
+        background-color: rgba(255, 255, 0, 0.4); }
+
+.map.first-version {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh; }
+  .map.first-version .position-camera {
     transform: translate(-3600px, -2600px); }
-    .map .position-camera .base {
+    .map.first-version .position-camera .base {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: flex-start;
       transform: rotate(210deg) skew(-30deg) scaleY(0.864); }
-      .map .position-camera .base .tile {
+      .map.first-version .position-camera .base .tile {
         width: 100px;
         height: 100px;
         position: relative;
         background-color: green;
         box-shadow: 0px 0px 0px 1px black; }
-        .map .position-camera .base .tile .house {
+        .map.first-version .position-camera .base .tile .house {
           position: absolute;
           transform-origin: 0 0;
           top: 30px;
@@ -104,7 +144,7 @@ body {
           width: 40px;
           height: 40px;
           background-color: rgba(255, 0, 0, 0.4); }
-        .map .position-camera .base .tile .building {
+        .map.first-version .position-camera .base .tile .building {
           position: absolute;
           transform-origin: 0 0;
           top: 30px;
@@ -112,7 +152,7 @@ body {
           width: 40px;
           height: 40px;
           background-color: rgba(0, 0, 255, 0.4); }
-        .map .position-camera .base .tile .apartment {
+        .map.first-version .position-camera .base .tile .apartment {
           position: absolute;
           transform-origin: 0 0;
           top: 30px;

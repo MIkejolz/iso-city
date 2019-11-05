@@ -7,7 +7,57 @@ body {
     background-color: grey;
 }
 
-.map {
+.map.top-view {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    .position-camera {
+        .base {
+            $w: 5vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .tile {
+                width: $w;
+                height: $w;
+                position: relative;
+                background-color: green;
+                box-shadow: 0px 0px 0px 1px rgba(black, 1);
+                transform: rotate(210deg) skew(-30deg) scaleY(0.864);
+                .house {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: rgba(red, 0.4);
+                    transform: rotate(90deg) skewX(-45deg) translate(10px, 0px) scaleY(0.864);
+                }
+                .building {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 20px;
+                    height: 20px;
+                    background-color: rgba(blue, 0.4);
+                    transform: rotate(-180deg) skewX(45deg) translate(-10px, 0px) scaleY(0.864);
+                }
+                .apartment {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 10px;
+                    height: 10px;
+                    background-color: rgba(yellow, 0.4);
+                }
+            }
+        }
+    }
+}
+
+
+.map.first-version {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
